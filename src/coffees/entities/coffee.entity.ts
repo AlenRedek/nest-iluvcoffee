@@ -19,6 +19,9 @@ export class Coffee {
   @Column()
   brand: string;
 
+  @Column({ default: 0 })
+  recommendations: number;
+
   @JoinTable() // Join the 2 tables - only the owner-side does this
   @ManyToMany(
     () => Flavor,
