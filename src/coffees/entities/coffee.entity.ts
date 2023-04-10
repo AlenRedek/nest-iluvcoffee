@@ -23,6 +23,9 @@ export class Coffee {
   @ManyToMany(
     () => Flavor,
     (flavor) => flavor.coffees, // What is Coffee within the Flavor entity
+    {
+      cascade: true,
+    },
   )
-  flavors: Array<string>;
+  flavors: Array<Flavor>;
 }
