@@ -30,6 +30,8 @@ $ yarn start:dev
 $ yarn start:prod
 ```
 
+Use the REST API with the provided Postman collections.
+
 ## Test
 
 ```bash
