@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "16fe099e-dff6-44a6-b9f1-611358591913",
+		"name": "nestjs-iluvcoffee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3350160"
+	},
+	"item": [
+		{
+			"name": "/coffees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/coffees?limit=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"coffees"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/coffees/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/coffees/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"coffees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/coffees",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Coffee #4\",\n    \"brand\": \"Nest\",\n    \"flavors\": [\n        \"caramel\",\n        \"chocolate\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{url}}/coffees",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/coffees/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Coffee updated\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/coffees/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"coffees",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/coffees/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/coffees/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"coffees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
